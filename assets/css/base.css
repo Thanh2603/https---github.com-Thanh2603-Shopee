@@ -2,6 +2,8 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
+    --primary-color:#EE4D2D;
+
 }
 *{
     box-sizing: inherit;
@@ -23,4 +25,13 @@ html{
 .grid__row{
     display: flex;
     flex-wrap: wrap;
+}
+/* Animation */
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
