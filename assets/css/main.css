@@ -32,7 +32,7 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .header__navbar-user-name{
-    margin-left: 8px;
+    margin-left: 4px;
     font-size: 1.4rem;
     font-weight: 400;
 }
@@ -73,6 +73,9 @@
 }
 .header__navbar-user-item{
 }
+.header__navbar-user-item--separate{
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
 .header__navbar-user-item a:first-child{
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
@@ -102,7 +105,7 @@
 
 }
 .header__navbar-item, .header__navbar-item-link{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--white-color);
     text-decoration: none;
     font-weight: 300;
@@ -131,6 +134,9 @@
 .header__navbar-icon-link{
     color: var(--white-color);
     text-decoration: none;
+}
+.header__navbar-icon-link:nth-child(2){
+    margin-left: 3px;
 }
 .header__navbar-icon{
     font-size: 1.8rem;
@@ -179,12 +185,14 @@
 .header__notify{
     position: absolute;
     top: 118%;
-    border: 1px solid #D3D3D3;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    border-radius: 2px;
     width: 404px;
     background-color: var(--white-color);
     right: 0;
     cursor: default;
-    transform-origin: calc(100% - 20px) top;
+    transform-origin: calc(100% - 32px) top;
     animation: headerNotify ease-in 0.25s;
     will-change: opacity, transform;
     display: none;
@@ -632,7 +640,7 @@
     box-shadow: 0 1px 1px #ccc;
     padding-left: 0;
     border-radius: 2px;
-    margin-top: 16px;
+    margin-top: 14px;
     animation: fadeIn ease-in 0.2s;
 
     display: none;
