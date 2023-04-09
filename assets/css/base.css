@@ -4,6 +4,7 @@
     --text-color: #333;
     --primary-color:#EE4D2D;
     --border-color:#dbdbdb;
+    --star-gold-color:#ffce3d;
 
     --header-height:120px;
     --navbar-height:34px;
@@ -30,17 +31,22 @@ html{
 .grid__row{
     display: flex;
     flex-wrap: wrap;
-    margin-left: -12px;
-    margin-right: -12px;
+    margin-left: -5px;
+    margin-right: -5px;
 }
 .grid__column-2{
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 16.6667%;
 }
+.grid__column-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
 .grid__column-10{
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
     width: 83.3332%;
 }
 /* Animation */
@@ -149,6 +155,7 @@ html{
     padding: 8px 16px;
     list-style: none;
     display: none;
+    z-index: 1;
 }
 .select-input__link{
     font-size: 1.4rem;
@@ -167,4 +174,36 @@ html{
     left: 0; 
     width: 100%; 
     height: 10px;
+}
+/* Pagination ( Phân Trang ) */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.pagination-item{
+    margin: 0 12px;
+}
+.pagination-item__link{
+    display: block;
+    text-decoration: none;
+    color: #939393;
+    min-width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+.pagination-item__icon{
+
+}
+.pagination-item--active .pagination-item__link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.pagination-item--active .pagination-item__link:hover{
+    background-color: #ed5c3f;
 }
