@@ -201,7 +201,7 @@
                                                     Phân Loại : Thời Trang Nam
                                                 </span>
                                                 <i class="header__cart-remove fa-sharp fa-solid fa-trash"></i>
-                                                <span class="header__cart-item-remove">Xóa</span>
+                                                <button  class="header__cart-item-remove btn">Xóa</button>
                                             </div>
                                         </div>
                                     
@@ -222,7 +222,7 @@
                                                     Phân Loại : TrắngThời Trang Nam, Nữ
                                                 </span>
                                                 <i class="header__cart-remove fa-sharp fa-solid fa-trash"></i>
-                                                <span class="header__cart-item-remove">Xóa</span>
+                                                <button  class="header__cart-item-remove btn">Xóa</button>
                                             </div>
                                         </div>
                                     
@@ -243,7 +243,7 @@
                                                     Phân Loại : Thời Trang Nam, Nữ
                                                 </span>
                                                 <i class="header__cart-remove fa-sharp fa-solid fa-trash"></i>
-                                                <span class="header__cart-item-remove">Xóa</span>
+                                                <button  class="header__cart-item-remove btn">Xóa</button>
                                             </div>
                                         </div>
                                     
@@ -264,7 +264,7 @@
                                                     Phân Loại : Thời Trang Nam, Nữ
                                                 </span>
                                                 <i class="header__cart-remove fa-sharp fa-solid fa-trash"></i>
-                                                <span class="header__cart-item-remove">Xóa</span>
+                                                <button  class="header__cart-item-remove btn">Xóa</button>
                                             </div>
                                         </div>
                                     
@@ -285,7 +285,7 @@
                                                     Phân Loại : Thời Trang Nam, Nữ
                                                 </span>
                                                 <i class="header__cart-remove fa-sharp fa-solid fa-trash"></i>
-                                                <span class="header__cart-item-remove">Xóa</span>
+                                                <button  class="header__cart-item-remove btn">Xóa</button>
                                             </div>
                                         </div>
                                     
@@ -306,7 +306,7 @@
                                                     Phân Loại : Thời Trang Nam, Nữ
                                                 </span>
                                                 <i class="header__cart-remove fa-sharp fa-solid fa-trash"></i>
-                                                <span class="header__cart-item-remove">Xóa</span>
+                                                <button  class="header__cart-item-remove btn">Xóa</button>
                                             </div>
                                         </div>
                                     
@@ -346,13 +346,13 @@
                             </h3>
             
                             <ul class="category-list">
-                                <li class="caregory-item caregory-item--active">
+                                <li class="category-item category-item--active">
                                     <a href="#" class="category-item__link">Áo Sơ Mi</a>
                                 </li>
-                                <li class="caregory-item">
+                                <li class="category-item">
                                     <a href="#" class="category-item__link">Áo Hoodie</a>
                                 </li>
-                                <li class="caregory-item">
+                                <li class="category-item">
                                     <a href="#" class="category-item__link">Áo Thun</a>
                                 </li>
                             </ul>
@@ -384,7 +384,7 @@
                                     <span class="home-filter__page-current">1</span>/14
                                 </span>
                                 <div class="home-filter__page-control">
-                                    <a href="" class="home-filter__page-btn home-filter__page-btn--disabled ">
+                                    <a href="" onclick="event.preventDefault()" class="home-filter__page-btn home-filter__page-btn--disabled ">
                                         <i class="home-filter__page-icon fas fa-angle-left"></i>
                                     </a>
                                     <a href="" class="home-filter__page-btn">
@@ -1065,4 +1065,44 @@
         <!-- </div>
     </div> -->
 </body>
+<!-- <script src="https://code.jquery.com/jquery-3.6.4.js"></script> -->
+<script>
+    // Active và gỡ Active phần Category
+    const $ = document.querySelector.bind(document)
+    const $$ = document.querySelectorAll.bind(document)
+
+    const categoryItem = $$('.category-item')
+
+    categoryItem.forEach((item, index) =>{
+        item.onclick = function(){
+            $('.category-item.category-item--active').classList.remove('category-item--active')
+
+            this.classList.add('category-item--active')
+        }
+    })
+    // Active và gỡ Active phần Home Filter
+
+    const homeFilterBtn = $$('.home-filter__btn')
+
+    homeFilterBtn.forEach((item, index)=>{
+        item.onclick = function(){
+            $('.home-filter__btn.btn--primary').classList.remove('btn--primary')
+            
+            this.classList.add('btn--primary')
+        }
+    })
+    // Active và gỡ Active phần Pagination
+
+    const paginationItem = $$('.pagination-item')
+    
+    paginationItem.forEach((item, index)=>{
+        item.onclick = function(event){
+            event.preventDefault();
+            $('.pagination-item.pagination-item--active').classList.remove('pagination-item--active')
+
+            this.classList.add('pagination-item--active')
+        }
+    }) 
+
+</script>
 </html>

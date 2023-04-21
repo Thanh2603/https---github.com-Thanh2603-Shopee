@@ -179,6 +179,7 @@ html{
 .pagination-item{
     margin: 0 12px;
 }
+
 .pagination-item__link{
     display: block;
     text-decoration: none;
